@@ -35,6 +35,6 @@ test("should return fizzbuzzbuzz when number multiple of 3 and multiple of 5", (
 test("should return fizzbuzzfizz when number is 30", () => {
   expect(convert(30)).toBe("fizzbuzzfizz");
 });
-test("should return fizzbuzzfizz when number is 45", () => {
-  expect(convert(30)).toBe("fizzbuzzfizz");
+test("should return fizzbuzzbuzz when number is 45", () => {
+  expect(convert(45)).toBe("fizzbuzzbuzz");
 });

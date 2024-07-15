@@ -17,3 +17,5 @@ export function convert(number: number): string {
 
   return result || number.toString();
 }
+
+console.log(convert(45));
