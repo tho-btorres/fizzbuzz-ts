@@ -9,5 +9,11 @@ export function convert(number: number): string {
   if (isDivisibleBy(number, 3)) result += FIZZ;
   if (isDivisibleBy(number, 5)) result += BUZZ;
 
+  const numberStr = number.toString();
+  for (const char of numberStr) {
+    if (char === "3") result += FIZZ;
+    if (char === "5") result += BUZZ;
+  }
+
   return result || number.toString();
 }
