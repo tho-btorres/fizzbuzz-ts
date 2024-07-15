@@ -1,6 +1,14 @@
 export const convert = (number: number): string => {
-  if (number % 3 === 0 && number % 5 === 0) return "fizzbuzz";
-  if (number % 3 === 0) return "fizz";
-  if (number % 5 === 0) return "buzz";
+  if (isDividedByThree(number) && isDividedByFive(number)) return "fizzbuzz";
+  if (isDividedByThree(number)) return "fizz";
+  if (isDividedByFive(number)) return "buzz";
   return number.toString();
 };
+
+const isDividedByThree = (number: number): boolean => {
+  return number % 3 === 0;
+}
+
+const isDividedByFive = (number: number): boolean => {
+  return number % 5 === 0;
+}
