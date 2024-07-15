@@ -19,3 +19,7 @@ test("should return 2 when number 2", () => {
 test("should return buzz when number multiple of 5", () => {
   expect(convert(5)).toBe("buzz");
 });
+
+test("should return fizzbuzz when number multiple of 3 and multiple of 5", () => {
+  expect(convert(15)).toBe("fizzbuzz");
+});
