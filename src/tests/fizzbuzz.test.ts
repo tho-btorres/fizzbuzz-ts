@@ -1,7 +1,15 @@
 import { convert } from "../fizzbuzz";
 
 test("should return 1", () => {
-  expect(convert(1)).toBe("1");
+  //arrange
+  const number = 1
+  const expectedResult = "1"
+
+  //act 
+  const result = convert(number);
+
+  //assert
+  expect(result).toBe(expectedResult);
 });
 
 test("should return fizz when number 3", () => {
