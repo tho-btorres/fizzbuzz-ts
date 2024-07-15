@@ -1,17 +1,21 @@
 const FIZZ = "fizz";
 const BUZZ = "buzz";
 
-export const convert = (number: number): string => {
-  if (isDividedByThree(number) && isDividedByFive(number)) return FIZZ + BUZZ;
-  if (isDividedByThree(number)) return FIZZ;
-  if (isDividedByFive(number)) return BUZZ;
-  return number.toString();
-};
+const isDivisibleBy = (number: number, divisor: number): boolean => number % divisor === 0;
 
-const isDividedByThree = (number: number): boolean => {
-  return number % 3 === 0;
-};
+export function convert(number: number): string {
+  let result = "";
 
-const isDividedByFive = (number: number): boolean => {
-  return number % 5 === 0;
-};
+  if (isDivisibleBy(number, 3)) result += FIZZ;
+  if (isDivisibleBy(number, 5)) result += BUZZ;
+
+  const numberStr = number.toString();
+  for (const char of numberStr) {
+    if (char === "3") result += FIZZ;
+    if (char === "5") result += BUZZ;
+  }
+
+  return result || number.toString();
+}
+
+console.log(convert(45));
